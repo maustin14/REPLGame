@@ -2,7 +2,7 @@ options = ["yes" , "no"]
 candysize = ["4" , "6", "8"]
 
 #Introduction
-puts "Psst....aye come here" .each_char |g|
+puts "Psst....aye come here"
 sleep 2
 puts "Wanna sell some candy??"
 puts options
@@ -52,7 +52,7 @@ end
 sleep 2
 puts "Welcome to the candy business"
 sleep 2
-puts "You just got your first pack and the streets is hungry for some candy"
+puts "You just got your first pack and the streets hungry for some candy"
 sleep 3
 puts "You at the park and you gotta get this candy off asap"
 sleep 2
@@ -71,6 +71,8 @@ case option
 when "The chubby kid" , "kid"
     puts "The chubby kid wobbles your way"
     chubby = gets.chomp.downcase.strip
+    
+    sleep 1
 
     while chubby.empty? do 
     	puts "He ask you \"\I see you got some candy....can I buy some?\"\ "
@@ -82,7 +84,7 @@ when "The chubby kid" , "kid"
     elsif chubby == "no"
         puts "Should've sold the candy...the kid kicks you in the kneecap and takes your candy!"
     else	
-    	puts "He didn't understand you and all of a sudden he's not hungry anymore."
+    	puts "He didn't understand you and all of a sudden he's not hungry anymore. Great...you lost your sale"
 
     end
 
@@ -112,15 +114,16 @@ when "go home" , "home"
     puts "But wait......the police stops you"
     puts "She see a suspious bag in your hand and wants to know what's inside"
     police = gets.chomp.downcase.strip
+   
 
     while police.empty? do 
-    	puts "Show he what's in your bag or run??"
+    	puts "cooperate or run??"
     	police = gets.chomp.downcase.strip
     end
     	
     if police == "run"
     	puts "Woooooooow....you the fastest person on earth. You left the police in the dust and made it home with your candy"
-    elsif	
+    elsif police == "cooperate"
     	puts "SMH...can't trust the police! Now you going downtown for questioning"
     else
         puts "The police doesn't have time for games and since you can'n answer 
